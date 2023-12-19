@@ -2,7 +2,7 @@ version: '3'
 
 services:
   nextcloud:
-    image: nextcloud:27.1.4-apache
+    image: nextcloud:27.1.5-apache
     container_name: nextcloud
     restart: unless-stopped
     networks:

@@ -2,12 +2,7 @@
 Description=Docker Nextcloud cron
 
 [Timer]
-OnCalendar=*-*-* 00:10:00
-OnCalendar=*-*-* 04:10:00
-OnCalendar=*-*-* 08:10:00
-OnCalendar=*-*-* 12:10:00
-OnCalendar=*-*-* 16:10:00
-OnCalendar=*-*-* 20:10:00
+OnCalendar=*-*-* 00/4:10:00
 
 [Install]
 WantedBy=timers.target

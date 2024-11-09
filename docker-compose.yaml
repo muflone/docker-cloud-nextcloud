@@ -6,7 +6,7 @@ services:
     container_name: nextcloud
     restart: unless-stopped
     networks:
-      - web
+      - public
     volumes:
       - ./main:/var/www/html
       - ./data:/var/www/html/data
@@ -24,6 +24,6 @@ services:
       - ./logs/nextcloud.log:/var/www/html/data/nextcloud.log
 
 networks:
-  web:
+  public:
     external: true
 

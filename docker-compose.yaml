@@ -1,10 +1,6 @@
-version: '3'
-
 services:
-  nextcloud:
+  app:
     image: nextcloud:30.0.1-apache
-    container_name: nextcloud
-    restart: unless-stopped
     networks:
       - public
     volumes:

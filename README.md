@@ -2,7 +2,7 @@ Docker Nextcloud for Cloud
 ==========================
 **Description:** Docker for Nextcloud
 
-**Copyright:** 2023 Fabio Castelli (Muflone) <muflone(at)muflone.com>
+**Copyright:** 2023-2024 Fabio Castelli (Muflone) <muflone(at)muflone.com>
 
 **License:** GPL-3+
 
@@ -21,5 +21,5 @@ Installation
 
 Build the container using Docker compose with:
 
-    docker-compose up -d
+    docker compose up -d
 

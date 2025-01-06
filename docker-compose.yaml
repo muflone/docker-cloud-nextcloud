@@ -1,7 +1,5 @@
-version: '3'
-
 services:
-  nextcloud:
+  app:
     image: nextcloud:30.0.1-apache
     container_name: nextcloud
     restart: unless-stopped
@@ -12,15 +10,8 @@ services:
       - ./data:/var/www/html/data
       - ./apps2:/var/www/html/custom_apps
       - ./config:/var/www/html/config
-      - ./apache-sites-default.conf:/etc/apache2/sites-enabled/000-default.conf:ro
       - ./apache-conf-prefork.conf:/etc/apache2/conf-enabled/prefork.conf:ro
-#      - ./apache-sites-ssl.conf:/etc/apache2/sites-enabled/001-ssl.conf:ro
-#      - ./apache-modules-ssl.conf:/etc/apache2/mods-enabled/ssl.conf:ro
-#      - ./apache-modules-ssl.load:/etc/apache2/mods-enabled/ssl.load:ro
       - ./apache-modules-socache_shmcb.load:/etc/apache2/mods-enabled/socache_shmcb.load:ro
-      - ./logs/apache_access.log:/var/log/apache2/access.log
-      - ./logs/apache_error.log:/var/log/apache2/error.log
-      - ./logs/apache_other_vhosts_access.log:/var/log/apache2/other_vhosts_access.log
       - ./logs/nextcloud.log:/var/www/html/data/nextcloud.log
 
 networks:

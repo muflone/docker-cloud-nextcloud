@@ -1,7 +1,7 @@
 services:
   app:
-    image: nextcloud:30.0.1-apache
     container_name: nextcloud
+    image: nextcloud:30.0.1-apache
     restart: unless-stopped
     networks:
       - public

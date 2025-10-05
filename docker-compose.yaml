@@ -4,7 +4,7 @@ services:
     image: nextcloud:31.0.8-apache
     restart: unless-stopped
     networks:
-      - public
+      - default
     volumes:
       - ./main:/var/www/html
       - ./data:/var/www/html/data
@@ -15,6 +15,7 @@ services:
       - ./logs/nextcloud.log:/var/www/html/data/nextcloud.log
 
 networks:
-  public:
+  default:
+    name: web
     external: true
 

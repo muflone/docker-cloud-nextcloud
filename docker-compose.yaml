@@ -1,7 +1,7 @@
 services:
   app:
     container_name: nextcloud
-    image: nextcloud:32.0.1-apache
+    image: nextcloud:32.0.2-apache
     restart: unless-stopped
     networks:
       - default
